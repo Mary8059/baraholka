@@ -362,6 +362,9 @@ h1 {
   max-width: 1100px;
   margin: 0 auto;
   font-family: 'Caveat', cursive;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .book-gallery h2 {
@@ -373,8 +376,11 @@ h1 {
 
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   
 }
 
@@ -508,7 +514,7 @@ h1 {
   right: 0;
   background: rgba(255, 255, 255, 0.95);
   padding: 10px;
-  font-size: 20px;
+  font-size: 17px;
   color: #333;
   transition: opacity 0.3s ease;
   height: 100%;
@@ -667,7 +673,7 @@ h1 {
 }
 
 .f1-card p {
-  font-size: 15px;
+  font-size: 17px;
   color: #333;
 }
 
