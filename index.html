@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -111,4 +112,119 @@
  <noscript>You need to enable JavaScript to view the full site.</noscript>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mary's Corner</title>
+    
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+ <body class="light-theme">
+
+    <h1><a href="index.html">Что в голове у Мари?</a></h1>
+
+    <section id="about">
+    <p> Этот сайт — моя барахолка, тут оказывается все, что мне нравится/приглянулось/произошло со мной. <br>
+       <br> Иногда мне не хватает самомодерации, поэтому тут может оказаться все, что угодно. <br>
+       <br> Сайт написан на вдохновении от удаления социальных сетей с телефона и увольнения — у меня появилось очень много свободного времени и энергии. <br>
+       <br> Ранее я сайтов не писала, поэтому тут все будет криво-косо, но с душой. Это я умею <br> <br>
+        📎🪻🪞🪆📼
+    </p>
+    </section>
+
+    <section id="baraholka">
+    <h2>Барахолка:</h2>   
+     <div class="bar-links"> 
+      <a href="books\books.html">Книжная полка</a>
+      <a href="photo\photo.html">Фотокарточки</a>
+      <a href="f1\f1.html">Ф1</a>
+      <a href="kinoclub\kinoclub.html">Киноклуб</a>
+      <a href="notes\thoughts.html">Заметки</a>
+     </div>
+    </section>
+
+    <section id="contacts">
+     <h2>Где меня найти:</h2>   
+     <div class="con-links">
+      <a href="https://t.me/mariva8059" target="_blank">tg: @mariva8059</a>
+     </div>
+    </section>
+
+ 
+ <div class="pinned-note auto-pinned">
+  <img src="tape.png" class="tape" alt="">
+  <img src="index_img.jpg" alt="Фото 1">
+ </div>
+
+ <div class="pinned-note auto-pinned">
+  <img src="tape4.png" class="tape" alt="">
+  <img src="index_img2.jpg" alt="Фото 2">
+ </div>
+
+ <div class="pinned-note auto-pinned">
+  <img src="tape.png" class="tape" alt="">
+  <img src="index_img3.jpg" alt="Фото 3">
+ </div>
+
+
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const notes = document.querySelectorAll('.auto-pinned');
+    const placedPositions = [];
+
+    notes.forEach(note => {
+      const noteWidth = 160;
+      const noteHeight = 180;
+      const padding = 20; // минимальное расстояние между карточками
+
+      const minTop = 100; // ограничение сверху
+      const maxTop = window.innerHeight - 100 - noteHeight;
+      const minLeft = window.innerWidth - 350; // правая область
+      const maxLeft = window.innerWidth - noteWidth - 20;
+
+      let top, left, overlap;
+      let attempts = 0;
+
+      do {
+        top = Math.random() * (maxTop - minTop) + minTop;
+        left = Math.random() * (maxLeft - minLeft) + minLeft;
+
+        // Проверка на перекрытие с другими карточками
+        overlap = placedPositions.some(pos => {
+          return (
+            Math.abs(pos.top - top) < noteHeight + padding &&
+            Math.abs(pos.left - left) < noteWidth + padding
+          );
+        });
+
+        attempts++;
+        if (attempts > 100) break; // выход из бесконечного цикла при переполнении
+      } while (overlap);
+
+      placedPositions.push({ top, left });
+
+      note.style.top = `${top}px`;
+      note.style.left = `${left}px`;
+    });
+  });
+ </script>
+
+
+  <!-- <div>
+    <button class="btn" type="button" aria-label="Переключить тему">Dark</button>
+ </div> -->
+
+ <script src="app.js"></script>
+ <noscript>You need to enable JavaScript to view the full site.</noscript>
+
+</body>
+>>>>>>> f9d9f9964203a81387345991626d3412f0b7ec0b
 </html>
