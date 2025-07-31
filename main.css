@@ -768,6 +768,9 @@ h1 {
   .attachments img {
     width: 100px;
   }
+  .pinned-note {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -795,5 +798,8 @@ h1 {
 
   .attachments img:hover {
     transform: scale(1.5);
+  }
+  .pinned-note {
+    display: none;
   }
 }
