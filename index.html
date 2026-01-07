@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Mary's Corner</title>
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <link href="snowFlakes/snow.min.css" rel="stylesheet">
+    
+</head>
+
+ <body>
+
+   <script src="snowFlakes/Snow.js"></script>
+    <script>
+  	 new Snow ();
+   </script>
+
+    <h1><a href="index.html">Что в голове у Мари?</a></h1>
+
+    <section id="about">
+      <div class="tape-index">
+       <img src="tape.png" class="tape" alt="тейп">
+      </div>
+    <p> ♡ Этот сайт — моя любимая барахолка, тут оказывается все, что мне нравится/приглянулось/произошло со мной! <br>
+       <br> ♡ Добро пожаловать домой! 
+       <br>
+        𓆝 𓆟 𓆞 𓆝 𓆟 𓆝 𓆟 𓆞 𓆝 𓆟 𓆝 𓆟 
+    </p>
+    </section>
+
+    <section id="baraholka">
+      <div class="tape-index">
+       <img src="tape4.png" class="tape" alt="тейп">
+      </div>
+    <h2>Барахолка:</h2>   
+     <div class="bar-links"> 
+      <a href="books\books.html" class="menu-link">Книжная полка📖</a>
+      <a href="photo\photo.html"class="menu-link">Фотокарточки🎞</a>
+      <a href="f1\f1.html"class="menu-link">Ф1🏎</a>
+      <a href="kinoclub\kinoclub.html"class="menu-link">Киноклуб🎬</a>
+      <a href="notes\thoughts.html"class="menu-link">Заметки📌</a>
+      <a href="sale\sale.html"class="menu-link">В хорошие руки🫆</a>
+      <a href="vitrina\vitrina.html"class="menu-link">Витрина безделушек🎍</a>
+     </div>
+    </section>
+
+    <section id="contacts">
+     <h2>Где меня найти:</h2>   
+     <div class="con-links">
+      <a href="https://t.me/mariva8059" target="_blank">tg: @mariva8059</a>
+      <a href="https://youtube.com/@mariva8059?si=nT5s5aYupn_nv0fW" target="_blank">yt: mariva8059</a>
+     </div>
+    </section>
+
+ <div class="gir_1" id="gir"></div>
+ 
+ <div class="pinned-note auto-pinned">
+  <img src="tape.png" class="tape" alt="">
+  <img alt="Фото 1">
+ </div>
+
+ <div class="pinned-note auto-pinned">
+  <img src="tape4.png" class="tape" alt="">
+  <img alt="Фото 2">
+ </div>
+
+ <div class="pinned-note auto-pinned">
+  <img src="tape.png" class="tape" alt="">
+  <img alt="Фото 3">
+ </div>
+
+ <div class="pinned-note auto-pinned">
+  <img src="tape.png" class="tape" alt="">
+  <img alt="Фото 4">
+ </div>
+
+ <div class="pinned-note auto-pinned">
+  <img src="tape4.png" class="tape" alt="">
+  <img alt="Фото 5">
+ </div>
+ 
+ <div class="pinned-note auto-pinned">
+  <img src="tape4.png" class="tape" alt="">
+  <img alt="Фото 6">
+ </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const notes = document.querySelectorAll('.auto-pinned');
+
+  // Список картинок для случайного выбора
+  const images = [
+    "index_img.jpg",
+    "index_img2.jpg",
+    "index_img3.jpg",
+    "index_img4.jpg",
+    "index_img5.jpg",
+    "index_img6.jpg",
+    "index_img7.jpg",
+    "index_img8.jpg",
+    "index_img9.jpg",
+    "index_img10.jpg",
+    "index_img11.jpg",
+    "index_img12.jpg",
+    "index_img13.jpg",
+    "index_img14.jpg",
+    "index_img15.jpg",
+    "index_img16.jpg",
+    "index_img17.jpg",
+    "index_img18.jpg",
+    "index_img19.jpg",
+    "index_img20.jpg",
+    "index_img21.jpg",
+    "index_img22.jpg",
+    "index_img23.jpg",
+    "index_img24.jpg",
+    "index_img25.jpg",
+  ];
+
+  // Фиксированные позиции в относительных единицах
+  const positions = [
+    { top: '20vh', left: '73vw' },
+    { top: '45vh', left: '75vw' },
+    { top: '67vh', left: '67vw' },
+    { top: '38vh', left: '87vw' },
+    { top: '22vh', left: '22vw' },
+    { top: '38vh', left: '19vw' }
+  ];
+
+  // Перемешивание массива (Фишер-Йетс)
+  function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]
+      ];
+    }
+    return array;
+  }
+
+  // Выбираем случайные картинки в количестве карточек
+  const randomImages = shuffle([...images]).slice(0, notes.length);
+
+  // Присваиваем картинки и позиции
+  notes.forEach((note, i) => {
+    const imgEl = note.querySelector('img:not(.tape)');
+    imgEl.src = randomImages[i];
+    note.style.top = positions[i].top;
+    note.style.left = positions[i].left;
+  });
+});
+</script>
+
+
+ <script src="app.js"></script>
+ <noscript>You need to enable JavaScript to view the full site.</noscript>
+
+ <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+     (function(m,e,t,r,i,k,a){
+         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+         m[i].l=1*new Date();
+         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+         k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+     })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=106077657', 'ym');
+
+     ym(106077657, 'init', {webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+   </script>
+   <noscript><div><img src="https://mc.yandex.ru/watch/106077657" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+ 
+
+</body>
+</html>
