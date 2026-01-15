@@ -572,7 +572,7 @@ h1 {
 /* ЗАМЕТКИ*/
 
 .thoughts-page {
-  width: min(60vw);
+  width: min(69vw);
   margin: 0 auto;
   padding: clamp(1.5rem, 3vw, 2.5rem) clamp(0.75rem, 2vw, 1.25rem);
   font-family: 'Comfortaa';
