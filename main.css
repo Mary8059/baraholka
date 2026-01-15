@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url('paper_texture.jpg'); 
+  background-image: url('./index/paper_texture.jpg'); 
   background-size: cover; /* или 'contain', если нужно подогнать */
               
   background-attachment: fixed; /* чтобы фон "стоял", а контент прокручивался */
@@ -31,7 +31,7 @@ body::before {
   height: min(75vh, 68.75rem);
   
   transform: translate(-50%, -50%);
-  background-image: url('fon6.png'); /* путь к дополнительному изображению */
+  background-image: url('./index/fon6.png'); /* путь к дополнительному изображению */
   background-repeat: no-repeat;
   background-position: center;
   pointer-events: none; /* не мешает кликам */
@@ -428,7 +428,7 @@ h1 {
   transform: translateX(-50%) rotate(-5deg);
   width: clamp(8rem, 15vw, 9.375rem);
   height: clamp(2.5rem, 4vw, 2.875rem);
-  background: url('tape.png') no-repeat center/contain;
+  background: url('./index/tape.png') no-repeat center/contain;
   pointer-events: none;
   z-index: 2;
   filter: drop-shadow(0 0.25rem 0.625rem rgba(0, 0, 0, 0.2));
@@ -477,7 +477,7 @@ h1 {
   transform: translateX(-50%) rotate(-5deg);
   width: clamp(8rem, 15vw, 9.375rem);
   height: clamp(2.5rem, 4vw, 2.875rem);
-  background: url('tape.png') no-repeat center/contain;
+  background: url('./index/tape.png') no-repeat center/contain;
   pointer-events: none;
   z-index: 2;
   filter: drop-shadow(0 0.25rem 0.625rem rgba(0, 0, 0, 0.2));
@@ -605,7 +605,7 @@ h1 {
   transform: translateX(-50%) rotate(-5deg);
   width: clamp(8rem, 15vw, 9.375rem);
   height: clamp(1.5rem, 3vw, 1.875rem);
-  background: url('tape4.png') no-repeat center/contain;
+  background: url('./index/tape4.png') no-repeat center/contain;
   pointer-events: none;
   z-index: 2;
   filter: drop-shadow(0 0.25rem 0.625rem rgba(0, 0, 0, 0.2));
@@ -736,7 +736,7 @@ h1 {
   transform: translateX(-50%) rotate(-5deg);
   width: clamp(8rem, 15vw, 9.375rem);
   height: clamp(2.5rem, 4vw, 2.875rem);
-  background: url('tape.png') no-repeat center/contain;
+  background: url('./index/tape.png') no-repeat center/contain;
   pointer-events: none;
   z-index: 2;
   filter: drop-shadow(0 0.25rem 0.625rem rgba(0, 0, 0, 0.2));
@@ -1072,7 +1072,7 @@ h1 {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('fon6.png');
+    background-image: url('./index/fon6.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1242,23 +1242,3 @@ h1 {
   transition: transform 0.3s ease;
 }
 
-#gir {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image:url('gir.png'); 
-    height: 62px;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
-    pointer-events: none
-}  
-.gir_1 {
-    background-position: 0 0
-}  
-.gir_2 {
-    background-position: 0 -62px
-}  
-.gir_3 {
-    background-position: 0 -124px
-}
