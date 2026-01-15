@@ -8,25 +8,6 @@ document.querySelectorAll('.menu-link').forEach(link => {
 });
 
 
-
-function gir() {
-    let nums = document.getElementById('gir').className; 
-    if(nums == 'gir_1') {document.getElementById('gir').className='gir_2';}  
-    if(nums == 'gir_2') {document.getElementById('gir').className='gir_3';}  
-    if(nums == 'gir_3') {document.getElementById('gir').className='gir_1';} 
-   }  
-    setInterval(gir, 500); 
-
-
- document.addEventListener('DOMContentLoaded', () => {
-  const polaroids = document.querySelectorAll('.polaroid');
-
-  polaroids.forEach(card => {
-    const angle = Math.floor(Math.random() * 8 - 4); // от -4 до +3
-    card.style.setProperty('--random-rotation', `${angle}deg`);
-  });
-});
-
   
 /*
 snowFlurry JS - version 2.0
